@@ -1,0 +1,228 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f9f9f9;
+}
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+section {
+    padding: 20px 0;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Hero Section */
+#hero {
+    background-color: #007bff;
+    color: white;
+    text-align: center;
+    padding: 30px 0;
+}
+#hero h1 {
+    font-size: 3em;
+    margin: 0;
+}
+#hero p {
+    font-size: 1.5em;
+    margin: 20px 0;
+}
+#hero button {
+    background-color: white;
+    color: #007bff;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.2em;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+#hero button:hover {
+    background-color: #e0e0e0;
+    color: #333;
+}
+
+/* Features Section */
+#features {
+    background-color: #f9f9f9;
+}
+.features-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.feature {
+    flex: 1 1 300px;
+    text-align: center;
+    margin: 20px;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    padding: 20px;
+}
+.feature i {
+    font-size: 3em;
+    color: #007bff;
+    margin-bottom: 10px;
+}
+.feature h3 {
+    font-size: 1.5em;
+
+}
+
+/* Reviews Section */
+.reviews-title {
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 2em;
+    color: #007bff;
+}
+.reviews {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    background: #f0f0f0;
+}
+.reviews .container {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    gap: 15px;       /* space between cards */
+    flex-wrap: nowrap; /* ensures all stay in one line */
+    overflow-x: auto; /* allows horizontal scroll on phones */
+    padding: 10px 0;
+}
+
+.review { 
+    flex: 1 1 280px; 
+    background: white; 
+    padding: 25px; 
+    margin: 10px; 
+    border-radius: 12px; 
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1); 
+    text-align: center; 
+    transform: translateY(30px); 
+    transition: opacity 0.3s ease-out, transform 0.3s ease-out; }
+
+.review.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+.review:hover {
+    transform: translateY(-20px);
+}
+
+.review p {
+    font-style: italic;
+    margin: 15px 0;
+    color: #555;
+}
+
+.rating {
+    color: #fbbf24; /* golden yellow */
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+.overall-rating {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.overall-rating .stars {
+    color: #fbbf24; /* golden yellow */
+    font-size: 1.5em;
+    margin-bottom: 5px;
+}
+
+.overall-rating .rating-text {
+    font-size: 1em;
+    color: #555;
+}
+
+/* Pricing Section */
+#pricing {
+    background-color: white;
+}
+.pricing-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.price-card {
+    flex: 1 1 200px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    margin: 20px;
+    padding: 30px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+.price-card h3 {
+    font-size: 1.8em;
+    margin-bottom: 10px;
+}
+.price-card .price {
+    font-size: 2.5em;
+    color: #007bff;
+    margin: 10px 0;
+}
+.price-card ul {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+}
+.price-card ul li {
+    margin: 10px 0;
+}
+.price-card button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+.price-card button:hover {
+    background-color: #0056b3;
+}
+
+/* Footer */
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 40px 0;
+        }
+        footer a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+        footer .social i {
+            font-size: 1.5em;
+            margin: 0 10px;
+        }
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #hero h1 {
+        font-size: 2em;
+    }
+    #hero p {
+        font-size: 1.2em;
+    }
+    .features-grid, .pricing-grid {
+        flex-direction: column;
+    }
+}
